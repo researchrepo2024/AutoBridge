@@ -1,0 +1,10 @@
+{
+  "domain": "petkit",
+  "name": "Petkit",
+  "codeowners": ["@al-one"],
+  "documentation": "https://github.com/hasscc/petkit",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/hasscc/petkit/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
