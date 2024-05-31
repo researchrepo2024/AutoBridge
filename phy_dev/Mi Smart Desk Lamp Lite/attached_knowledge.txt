@@ -1,0 +1,62 @@
+[Github code for Mi Smart Desk Lamp Lite]
+
+Xiaomi Philips Lights Integration for Home Assistant by syssi
+This repository offers a component to control various Xiaomi Philips lights, including LED bulbs, ceiling lamps, and the Eyecare Smart Lamp. While it's not specifically for the Mi Smart Desk Lamp Lite, the supported devices and features like power control, brightness adjustment, and color temperature changes might be relevant.
+https://github.com/syssi/philipslight
+
+Homebridge Plugin for Mi LED Desk Lamp by moifort
+This Homebridge plugin exposes the Xiaomi LED Desk Lamp to HomeKit, allowing for integration with Apple's home automation platform. It requires obtaining a token and IP address for the lamp but provides a way to control it outside of its native ecosystem.
+https://github.com/moifort/homebridge-mi-led-desk-lamp
+
+******************************************
+[APIs and SDKs for Mi Smart Desk Lamp Lite]
+
+Mi Developer Platform: Xiaomi provides an official app distribution platform known as GetApps, which is part of the Mi Developer ecosystem. While the specific details for the Mi Smart Desk Lamp Lite API/SDK were not directly accessible through the provided link, Xiaomi's developer platform is a potential source for official APIs and SDKs related to Xiaomi smart devices. You might need to navigate through the official developer portal or contact Xiaomi directly for access to specific APIs or SDKs for the lamp or similar devices​​.
+https://global.developer.mi.com/home#:~:text=URL%3A%20https%3A%2F%2Fglobal,100
+
+Xiaomi Cloud-ML Project: This project exposes API access interfaces for the full functionality of the Xiaomi Cloud-ML service. It includes APIs, SDKs, or command-line tools for various functionalities. Although the documentation primarily focuses on cloud and machine learning services, understanding Xiaomi's approach to API structure and authentication could provide insights into interacting with their smart devices. However, it's important to note that the specific details for the Mi Smart Desk Lamp Lite were not found here, and this source might be more relevant for developers looking into Xiaomi's cloud services​​.
+https://docs.api.xiaomi.com/en/cloud-ml/api/docs.html
+
+Homebridge Plugin for Xiaomi Led Desk Lamp: A community-developed solution, the Homebridge plugin for Xiaomi Led Desk Lamp, allows the lamp to be exposed to HomeKit. This plugin requires obtaining the lamp's token and IP address, which can be a bit challenging but is well documented within the community. Although this is not an official Xiaomi API/SDK, it offers a practical way to control the lamp through HomeKit integration. This approach might be beneficial for developers looking to integrate the lamp into a smart home setup​​.
+https://github.com/moifort/homebridge-mi-led-desk-lamp
+
+For official and more detailed information, visiting the Mi Developer portal (https://global.developer.mi.com/home) and exploring Xiaomi's API documentation (if accessible) would be advisable. For HomeKit integration or similar custom solutions, the Homebridge plugin (https://github.com/moifort/homebridge-mi-led-desk-lamp) could be a valuable resource.
+
+******************************************
+[Web Content for Mi Smart Desk Lamp Lite]
+
+To control the Mi Smart Desk Lamp Lite in HomeAssistant, you can use the python-miio library, which offers a comprehensive interface for interacting with Xiaomi IoT products, including lights and lamps. This library enables you to integrate Xiaomi devices with HomeAssistant by using the miiocli command line interface to interact with your devices, such as setting developer modes or retrieving tokens necessary for integration.
+
+Here's a simplified guide based on the information gathered:
+
+Python-Miio Installation: Begin by installing the python-miio package. This can be done using pip with the command pip3 install python-miio.
+Device Token Retrieval: The next step involves retrieving the token of your Xiaomi device, which is essential for the integration. This can usually be accomplished by enabling LAN control in the Mi Home app and extracting the token from the app's log files. Alternatively, tools like "Get Mi Home Devices Token" can simplify this process.
+Integration with HomeAssistant: Once you have the token, you can add the device to your HomeAssistant setup. For lamps and lights, you might use the Yeelight integration if applicable, specifying the device's IP address and the retrieved token in your configuration.
+For lights and lamps, including those by Xiaomi, HomeAssistant has a built-in integration for Yeelight devices, which could also be compatible with your Mi Smart Desk Lamp Lite if it supports Yeelight's LAN control protocol. This integration allows for the control of various aspects of the light, such as brightness, color temperature, and power state, through HomeAssistant.
+
+The specific steps and configurations might slightly vary based on the exact model of your lamp and the current version of HomeAssistant and its integrations. It's also important to ensure that your device firmware is up to date and that LAN control is enabled through the Mi Home app for your device.
+
+For a detailed step-by-step guide and troubleshooting, refer to the python-miio documentation and the Yeelight integration page on the HomeAssistant official documentation site​​​​​​.
+
+https://www.home-assistant.io/integrations/xiaomi_miio/
+https://www.home-assistant.io/integrations/yeelight/
+https://community.home-assistant.io/t/integrate-mi-smart-led-bulb-warm-white-xmbgdp01ylk/290404
+
+******************************************
+[Manual\Official Document Information for Mi Smart Desk Lamp Lite]
+
+The Mi Smart Desk Lamp Lite, known as the Mi LED Desk Lamp 1S, offers a range of features designed to provide a comfortable and customizable lighting experience. Here's a summary of the technical details and specifications based on the information gathered:
+
+Document/Manual: Mi LED Desk Lamp 1S Overview
+URL: https://store.mi.com/in/item/3194800001
+https://www.mi.com/global/smartlamp/
+Technical Details:
+https://www.mi.com/global/product/mi-led-desk-lamp-1s
+Luminous Flux: The lamp provides up to 520 lumens, offering even illumination over a wide area. This is a 73% increase compared to the first-generation lamp, with central illuminance boosted to 1250 lux, 66% higher than its predecessor​​​​​​.
+Color Temperature Range: Adjustable from 2600K to 5000K, allowing users to choose the most comfortable setting for their eyes and tasks​​.
+Color Rendering Index (Ra): The lamp boasts an ultra-high Ra 90, surpassing the first generation's Ra 83 and coming close to natural light's Ra 100. This high Ra value means it can bring out more vivid colors, making it suitable for settings that require precise and accurate lighting, such as medical establishments​​​​​​.
+Fresnel Lens: Equipped with a Fresnel lens, the Mi LED Desk Lamp 1S provides extremely even and natural illumination by reflecting and refracting light​​​​.
+Flicker-Free Lighting: It uses a constant current analog dimming mechanism to eliminate flicker at any color temperature or brightness level, reducing eye strain​​​​.
+4 Lighting Modes: The lamp includes four modes – Reading, Computer, Child, and Focus – each designed to meet different lighting requirements and protect users' eyes. The Focus Mode even simulates a "breathing" rhythm to remind users to take breaks, enhancing productivity​​​​.
+Voice Control: Supports voice control via Google Assistant, Alexa, and Siri, making it easy to adjust settings hands-free. It also connects to the Apple HomeKit system​​​​.
+Design and Durability: The lamp features a minimalist design with a durable all-metal hinge, able to withstand opening and closing for 10,000 times with only a 17% loss in performance. It's designed for efficient heat dissipation, ensuring a long lifespan​​.

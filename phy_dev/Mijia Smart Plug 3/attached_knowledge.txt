@@ -1,0 +1,90 @@
+Github code for Mijia Smart Plug 3
+
+Xiaomi Mi Smart WiFi Socket integration for Home Assistant:
+
+Lab Name: syssi/xiaomiplug
+URL: [GitHub - syssi/xiaomiplug](https://github.com/syssi/xiaomiplug)
+Detailed Description: This custom component for Home Assistant enables the integration of Xiaomi Smart WiFi Sockets and Power Strips, including various models like chuangmi.plug.m1, chuangmi.plug.m3, chuangmi.plug.v1, and others. It supports features like power on/off and monitoring temperature for different plug models. The setup requires adding a platform configuration in your configuration.yaml file with the device's IP address and token.
+How to use mijia smart plug devices in Home Assistant?:
+
+Lab Name: How to use mijia smart plug devices in Home Assistant?
+URL: [Home Assistant Community - How to use mijia smart plug devices](https://community.home-assistant.io/t/how-to-use-mijia-smart-plug-devices-in-home-assistant/490066)
+Detailed Description: This community post provides a brief guide on configuring Mijia smart plugs in Home Assistant using the xiaomi_miio platform. It covers the basic YAML configuration needed to add your smart plug to Home Assistant, specifying the host IP, token, and optionally naming the device for easier identification.
+Xiaomi Miio - Home Assistant Documentation:
+
+Lab Name: Xiaomi Miio Integration
+URL: [Xiaomi Miio - Home Assistant](https://www.home-assistant.io/integrations/xiaomi_miio/)
+Detailed Description: The official Home Assistant documentation for the Xiaomi Miio integration covers a wide range of Xiaomi smart devices, including smart WiFi sockets (plugs) and power strips. It details the features supported by each device model and provides instructions on how to enable and configure the integration within Home Assistant, including services for controlling the devices.
+
+
+******************************************
+APIs and SDKs for Mijia Smart Plug 3
+
+For controlling the Mijia Smart Plug 3 or similar Xiaomi smart plug devices through programming, several APIs and SDKs are available that cater to various functionalities like device discovery, authentication, device control, device status, and data synchronization.
+https://github.com/0x100/mi-home-api
+
+mi-home-api: A REST and Java API for interacting with Xiaomi Smart Home devices, including plugs. This API is suitable for developers looking to integrate Xiaomi smart home products into their applications or services. You can explore more about it and find the code on GitHub - mi-home-api.
+https://github.com/syssi/xiaomiplug
+
+xiaomiplug: This project specifically focuses on the integration of Xiaomi Mi Smart WiFi Socket (Plug) with Home Assistant, making it a great choice if you're working within the Home Assistant ecosystem. The integration allows control over the Xiaomi Smart WiFi Socket and Power Strip. Detailed documentation and instructions can be found on its GitHub page.
+https://github.com/rytilahti/python-miio
+
+python-miio: This Python library and console tool supports controlling a wide range of Xiaomi smart appliances, including smart plugs. It provides a comprehensive way to interact with devices using the miIO and MIoT protocols. The library covers functionalities like device discovery, control commands, and status inquiries. For more specific usage and API documentation, refer to its GitHub repository.
+https://global.developer.mi.com/home
+
+Mi Developer Portal: While the portal itself was not directly accessible for specific API/SDK information due to the requirement for JavaScript, it is the official source for Xiaomi's developer resources, including APIs and SDKs for all Xiaomi smart devices. You might find detailed documentation, SDK downloads, and API keys necessary for development here: Mi Developer.
+https://global.developer.mi.com/home
+
+Each of these resources provides a unique approach to integrating Xiaomi smart devices into your applications, depending on your specific requirements and the development environment you are working within.
+
+******************************************
+Web Content for Mijia Smart Plug 3
+
+Integration via Home Assistant Configuration:
+
+You'll need to add entries to your configuration.yaml file under the switch domain.
+Specify xiaomi_miio as the platform, along with the device's IP address and token.
+Optionally, you can name your device for easier identification within Home Assistant.
+Supported Devices:
+
+The platform supports a range of models, such as chuangmi.plug.m1, chuangmi.plug.m3, chuangmi.plug.v2, and others, which include temperature attributes and allow control over the power state (on/off).
+Retrieving the Access Token:
+
+Getting the token might be the most challenging part. There are detailed guides available on how to retrieve this token, either via the Xiaomi Cloud Tokens Extractor tool or through the Xiaomi Home app. This step is crucial for the integration to work, as the token is required to authorize Home Assistant to control the device.
+Example Configuration:
+
+An example configuration in your configuration.yaml could look something like this, adjusting the host, token, and model to match your specific device:
+yaml
+Copy code
+switch:
+  - platform: xiaomi_miio
+    host: YOUR_DEVICE_IP
+    token: YOUR_DEVICE_TOKEN
+    name: Mijia Smart Plug 3
+Additional Features:
+
+Besides basic power control, some models also support USB power control, temperature readings, and more, depending on the specific model of the device you have.
+Custom Component for Advanced Integration:
+
+For a more advanced setup or if your device model isn't directly supported by the built-in xiaomi_miio platform, you might consider using a custom component available on GitHub that extends support to more devices and offers additional features like Wi-Fi LED control, setting power price, and power mode for power strips.
+For more detailed information and step-by-step instructions, you can refer to the Home Assistant documentation and the community forum:
+
+Xiaomi Miio - Home Assistant
+How to use mijia smart plug devices in Home Assistant - Home Assistant Community
+https://github.com/syssi/xiaomiplug
+
+GitHub - syssi/xiaomiplug: Xiaomi Mi Smart WiFi Socket integration for Home Assistant
+https://community.home-assistant.io/t/how-to-use-mijia-smart-plug-devices-in-home-assistant/490066
+These resources provide comprehensive guides to get your Mijia Smart Plug 3 integrated with Home Assistant, including troubleshooting tips and community support for any specific questions you might have.
+
+******************************************
+Manual\Official Document Information for Mijia Smart Plug 3
+
+Based on the information gathered from various sources, the Mijia Smart Plug 3, officially known as MIJIA Smart Socket 3, is a device designed by Xiaomi to transform traditional home appliances into smart devices. This smart plug enables remote control of appliances, allowing users to switch off or on the electricity supply through the MIJIA app, which also provides real-time power consumption details. Additionally, it can be controlled via Xiao AI speakers using voice commands and regulated through a timer for scheduled operations​​.
+https://www.mi.com/global/support/user-guide/
+
+The smart socket is equipped with several safety features, including protection against overheating or overloading and a child lock. It supports devices requiring a maximum current of 10 A and can be connected via 2.4 GHz Wi-Fi. The plug is compatible with smartphones running Android 4.4 or iOS 9.0 and above. Its dimensions are 52 x 50 x 57.6 mm, and it weighs 68 g. Despite its release in China for 59 yuan (~US$8.61), it's unclear if Xiaomi plans to launch this product in other markets​​.
+https://www.gizmochina.com/2022/08/24/mijia-smart-socket-3-official-china/
+
+For those interested in integrating the Mijia Smart Plug 3 with Home Assistant or similar platforms, the device offers flexibility and convenience in managing household appliances, contributing to a smarter home environment. However, it's important to note that the plug cannot be used for 16A appliances like refrigerators and water heaters. This limitation suggests the potential for a higher model that could accommodate such appliances​​.
+https://files.miot-global.com/files/Mi_Smart_socket/smart_socket_EN.pdf
