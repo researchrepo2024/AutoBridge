@@ -5,12 +5,10 @@
     "documentation": "https://www.home-assistant.io/integrations/androidtv",
     "integration_type": "device",
     "iot_class": "local_polling",
-    "issue_tracker": "https://github.com/ollo69/ha-androidtv-custom/issues",
-    "loggers": ["adb_shell", "androidtv", "pure_python_adb"],
     "requirements": [
       "adb-shell[async]==0.4.3",
       "androidtv[async]==0.0.70",
       "pure-python-adb[async]==0.3.0.dev0"
     ],
-    "version": "0.1.7"
+    "version": "0.0.1"
   }
