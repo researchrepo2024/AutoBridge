@@ -1,7 +1,6 @@
 {
     "domain": "androidtv_custom",
     "name": "Android TV Custom",
-    "codeowners": ["@JeffLIrion", "@ollo69"],
     "config_flow": true,
     "documentation": "https://www.home-assistant.io/integrations/androidtv",
     "integration_type": "device",
