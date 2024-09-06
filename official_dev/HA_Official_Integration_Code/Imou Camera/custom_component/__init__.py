@@ -1,9 +1,4 @@
-"""
-Custom integration to integrate Imou Life with Home Assistant.
 
-For more details about this integration, please refer to
-https://github.com/user2684/imou_life
-"""
 import asyncio
 import logging
 

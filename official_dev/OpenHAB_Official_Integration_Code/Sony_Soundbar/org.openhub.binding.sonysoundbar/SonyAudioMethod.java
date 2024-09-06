@@ -1,24 +1,9 @@
-/**
- * Copyright (c) 2010-2021 Contributors to the openHAB project
- *
- * See the NOTICE file(s) distributed with this work for additional
- * information.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0
- *
- * SPDX-License-Identifier: EPL-2.0
- */
+
 package org.openhab.binding.sonyaudio.internal.protocol;
 
 import java.util.List;
 
-/**
- * The {@link SonyAudioMethod} base class for SONY API methods
- *
- * @author David Åberg - Initial contribution
- */
+
 public abstract class SonyAudioMethod {
     protected int id = 1;
     protected String method;
@@ -30,11 +15,7 @@ public abstract class SonyAudioMethod {
     }
 }
 
-/**
- * The {@link GetPowerStatus} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class GetPowerStatus extends SonyAudioMethod {
     public String[] params = new String[] {};
 
@@ -43,11 +24,7 @@ class GetPowerStatus extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link GetCurrentExternalTerminalsStatus} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class GetCurrentExternalTerminalsStatus extends SonyAudioMethod {
     public String[] params = new String[] {};
 
@@ -56,11 +33,7 @@ class GetCurrentExternalTerminalsStatus extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link SetPowerStatus} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class SetPowerStatus extends SonyAudioMethod {
     public Param[] params;
 
@@ -79,11 +52,7 @@ class SetPowerStatus extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link SetActiveTerminal} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class SetActiveTerminal extends SonyAudioMethod {
     public Param[] params;
 
@@ -106,11 +75,7 @@ class SetActiveTerminal extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link GetPlayingContentInfo} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class GetPlayingContentInfo extends SonyAudioMethod {
     public Param[] params;
 
@@ -140,11 +105,6 @@ class GetPlayingContentInfo extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link SetPlayContent} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
 class SetPlayContent extends SonyAudioMethod {
     public Param[] params;
 
@@ -175,11 +135,7 @@ class SetPlayContent extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link GetVolumeInformation} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class GetVolumeInformation extends SonyAudioMethod {
     public Param[] params;
 
@@ -206,11 +162,7 @@ class GetVolumeInformation extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link SetAudioVolume} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class SetAudioVolume extends SonyAudioMethod {
     public Param[] params;
 
@@ -268,11 +220,7 @@ class SetAudioVolume extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link SetAudioMute} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class SetAudioMute extends SonyAudioMethod {
     public Param[] params;
 
@@ -303,11 +251,7 @@ class SetAudioMute extends SonyAudioMethod {
     }
 }
 
-/**
- * Helper class
- *
- * @author David Åberg - Initial contribution
- */
+
 class GetSoundSettings extends SonyAudioMethod {
     public Param[] params;
 
@@ -330,11 +274,7 @@ class GetSoundSettings extends SonyAudioMethod {
     }
 }
 
-/**
- * Helper class
- *
- * @author David Åberg - Initial contribution
- */
+
 class SetSoundSettings extends SonyAudioMethod {
     public Param[] params;
 
@@ -368,44 +308,27 @@ class SetSoundSettings extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link SetSoundField} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class SetSoundField extends SetSoundSettings {
     SetSoundField(String soundField) {
         super("soundField", soundField);
     }
 }
 
-/**
- * The {@link SetPureDirect} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class SetPureDirect extends SetSoundSettings {
     SetPureDirect(boolean pureDirect) {
         super("pureDirect", pureDirect ? "on" : "off");
     }
 }
 
-/**
- * The {@link SetClearAudio} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class SetClearAudio extends SetSoundSettings {
     SetClearAudio(boolean clearAudio) {
         super("clearAudio", clearAudio ? "on" : "off");
     }
 }
 
-/**
- * The {@link SwitchNotifications} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
 class SwitchNotifications extends SonyAudioMethod {
     public Param[] params;
 
@@ -435,11 +358,7 @@ class SwitchNotifications extends SonyAudioMethod {
     }
 }
 
-/**
- * The {@link SeekBroadcastStation} SONY Audio control API method
- *
- * @author David Åberg - Initial contribution
- */
+
 class SeekBroadcastStation extends SonyAudioMethod {
     public Param[] params;
 

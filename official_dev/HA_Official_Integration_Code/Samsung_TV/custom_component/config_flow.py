@@ -143,7 +143,6 @@ class SamsungTVConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     VERSION = 1
 
-    # pylint: disable=no-member # https://github.com/PyCQA/pylint/issues/3167
 
     def __init__(self):
         """Initialize flow."""

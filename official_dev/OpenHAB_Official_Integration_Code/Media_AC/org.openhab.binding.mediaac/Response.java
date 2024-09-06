@@ -7,11 +7,7 @@ import org.openhab.binding.mideaac.internal.handler.CommandBase.SwingMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Response from a device.
- *
- * @author Jacek Dobrowolski
- */
+
 public class Response {
     byte[] data;
     private Logger logger = LoggerFactory.getLogger(Response.class);

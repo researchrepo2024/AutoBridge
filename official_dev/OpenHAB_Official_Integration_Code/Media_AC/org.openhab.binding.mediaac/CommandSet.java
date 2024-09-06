@@ -2,11 +2,7 @@ package org.openhab.binding.mideaac.internal.handler;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-/**
- * Command changing a Midea AC.
- *
- * @author Jacek Dobrowolski
- */
+
 public class CommandSet extends CommandBase {
 
     public CommandSet() {

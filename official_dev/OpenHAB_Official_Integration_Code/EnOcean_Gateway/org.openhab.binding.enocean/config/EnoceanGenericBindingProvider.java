@@ -1,15 +1,4 @@
-/**
- * Copyright (c) 2010-2020 Contributors to the openHAB project
- *
- * See the NOTICE file(s) distributed with this work for additional
- * information.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0
- *
- * SPDX-License-Identifier: EPL-2.0
- */
+
 package org.openhab.binding.enocean.internal.config;
 
 import java.util.HashMap;
@@ -27,23 +16,7 @@ import org.openhab.model.item.binding.BindingConfigParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * This class can parse information from the generic binding format and provides
- * Enocean binding information from it. It registers as a
- * {@link EnoceanBindingProvider} service as well.
- *
- * The syntax of the binding configuration strings accepted is the following: <br>
- * <br>
- * enocean="{id="&lt;id_of_enocean_device&gt;" [, EEP = "&lt;EEP_name&gt;
- * "][, CHANNEL = "
- * &lt;channelName&gt;"][, PARAMETER = "&lt;parameterName&gt;"]}" The device id
- * is printed on the device package. When the EEP is needed, the eep (e.g.
- * "F6.02.01") is also printed on the device package. All parameters in [] are
- * optional and only used for some devices.
- *
- * @author Thomas Letsch (contact@thomas-letsch.de)
- * @since 1.3.0
- */
+
 public class EnoceanGenericBindingProvider extends AbstractGenericBindingProvider implements EnoceanBindingProvider {
 
     private static final String PACKAGE_PREFIX_PROFILES = "org.openhab.binding.enocean.internal.profiles.";
@@ -118,13 +91,7 @@ public class EnoceanGenericBindingProvider extends AbstractGenericBindingProvide
 
     }
 
-    /**
-     * This is an internal data structure to store information from the binding
-     * config strings and use it to answer the requests to the EnOcean binding
-     * provider.
-     *
-     * @author Thomas Letsch (contact@thomas-letsch.de)
-     */
+
     public class EnoceanBindingConfig implements BindingConfig {
         public String id;
         public String channel;

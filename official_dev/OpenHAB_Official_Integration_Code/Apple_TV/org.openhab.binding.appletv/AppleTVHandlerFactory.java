@@ -1,13 +1,4 @@
-/**
- * Copyright (c) 2010-2019 by the respective copyright holders.
- *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * SPDX-License-Identifier: EPL-2.0
- */
+
 package org.openhab.binding.appletv.internal;
 
 import static org.openhab.binding.appletv.internal.AppleTVBindingConstants.SUPPORTED_THING_TYPES_UIDS;
@@ -26,12 +17,7 @@ import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 
-/**
- * The {@link AppleTVHandlerFactory} is responsible for creating things and thing
- * handlers.
- *
- * @author markus7017 - Initial contribution
- */
+
 @NonNullByDefault
 @Component(service = { ThingHandlerFactory.class, AppleTVHandlerFactory.class }, configurationPid = "binding.appletv")
 public class AppleTVHandlerFactory extends BaseThingHandlerFactory {

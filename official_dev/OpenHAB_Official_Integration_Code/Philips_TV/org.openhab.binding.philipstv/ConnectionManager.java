@@ -1,15 +1,4 @@
-/**
- * Copyright (c) 2010-2021 Contributors to the openHAB project
- *
- * See the NOTICE file(s) distributed with this work for additional
- * information.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0
- *
- * SPDX-License-Identifier: EPL-2.0
- */
+
 package org.openhab.binding.philipstv.internal;
 
 import java.io.ByteArrayOutputStream;
@@ -31,12 +20,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-/**
- * The {@link ConnectionManager} is responsible for handling https GETs and POSTs to the Philips
- * TVs.
- *
- * @author Benjamin Meyer - Initial contribution
- */
+
 public class ConnectionManager {
 
     private static final String TARGET_URI_MSG = "Target Uri is: {}";
@@ -45,8 +29,6 @@ public class ConnectionManager {
 
     public static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
-    // Cannot use jetty in OH2.4 due to 9.4.11.v20180605 version with digest auth bug
-    // https://github.com/eclipse/jetty.project/issues/1555
     private final CloseableHttpClient httpClient;
 
     private final HttpHost httpHost;

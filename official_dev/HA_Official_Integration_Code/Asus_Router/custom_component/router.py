@@ -388,10 +388,6 @@ class ARDevice:
             if entry.domain != "device_tracker":
                 continue
             capabilities = entry.capabilities
-            # Check that capabilities is a dictionary and that it has the MAC address
-            # I actually don't know how this can be possible, but the issue #785
-            # https://github.com/Vaskivskyi/ha-asusrouter/issues/785
-            # shows that device_tracker entry can exist without a MAC address
             if isinstance(capabilities, dict) and "mac" in capabilities:
                 mac = capabilities["mac"]
                 self._clients[mac] = ARClient(mac)
@@ -523,10 +519,6 @@ class ARDevice:
         new_client = False
 
         for client_mac, client_info in clients.items():
-            # We proceed only if device is online
-            # This way we'll avoid adding long history of devices
-            # which might have been connected long time ago
-            # and are not important anymore
             state = client_info.state
             if state is not ConnectionState.CONNECTED:
                 continue
@@ -608,17 +600,10 @@ class ARDevice:
 
         # New list
         new_list = []
-
-        # We take all the clients currently connected from the self._clients_list
-        # which have the connected time set
         for client in self._clients_list:
             if client.get("connected"):
                 new_list.append(client)
 
-        # Append any client which was already in the list self._latest_connected_list
-        # but is not in the new list. This means that the client has disconnected,
-        # but the sensor should be showing all the connections made
-        # Since client itself might have changed, we should compare MAC addresses
         for client in self._latest_connected_list:
             if client["mac"] not in [x["mac"] for x in new_list]:
                 new_list.append(client)
@@ -633,8 +618,6 @@ class ARDevice:
         ):
             new_list.pop(0)
 
-        # Update the self._latest_connected and self._latest_connected_list
-        # Check that list has at least one element so that we don't get an error
         if len(new_list) > 0:
             self._latest_connected = new_list[-1].get(CONNECTED)
             self._latest_connected_list = new_list

@@ -110,11 +110,6 @@ class SamsungTVRemote(SamsungTVEntity, RemoteEntity):
         await self._async_call_service(SERVICE_TURN_ON)
 
     async def async_send_command(self, command: Iterable[str], **kwargs: Any) -> None:
-        """Send a command to a device.
-
-        Supported keys vary between models.
-        See https://github.com/jaruba/ha-samsungtv-tizen/blob/master/Key_codes.md
-        """
         num_repeats = kwargs[ATTR_NUM_REPEATS]
         commands = JOIN_COMMAND.join(command)
         content_id = commands

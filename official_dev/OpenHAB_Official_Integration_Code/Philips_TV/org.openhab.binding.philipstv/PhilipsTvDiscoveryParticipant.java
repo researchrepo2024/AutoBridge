@@ -1,15 +1,4 @@
-/**
- * Copyright (c) 2010-2021 Contributors to the openHAB project
- *
- * See the NOTICE file(s) distributed with this work for additional
- * information.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0
- *
- * SPDX-License-Identifier: EPL-2.0
- */
+
 package org.openhab.binding.philipstv.internal.discovery;
 
 import static org.openhab.binding.philipstv.internal.PhilipsTvBindingConstants.DEFAULT_PORT;
@@ -36,11 +25,7 @@ import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * The {@link PhilipsTvDiscoveryParticipant} is responsible for discovering Philips TV devices through UPnP.
- *
- * @author Benjamin Meyer - Initial contribution
- */
+
 @NonNullByDefault
 @Component(immediate = true)
 public class PhilipsTvDiscoveryParticipant implements UpnpDiscoveryParticipant {

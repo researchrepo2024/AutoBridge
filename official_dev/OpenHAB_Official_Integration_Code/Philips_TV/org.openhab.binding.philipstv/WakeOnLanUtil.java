@@ -1,15 +1,4 @@
-/**
- * Copyright (c) 2010-2021 Contributors to the openHAB project
- *
- * See the NOTICE file(s) distributed with this work for additional
- * information.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0
- *
- * SPDX-License-Identifier: EPL-2.0
- */
+
 package org.openhab.binding.philipstv.internal;
 
 import static org.openhab.binding.philipstv.internal.ConnectionManager.OBJECT_MAPPER;
@@ -38,11 +27,7 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 
-/**
- * The {@link WakeOnLanUtil} is offering methods for powering on TVs via Wake-On-LAN.
- *
- * @author Benjamin Meyer - Initial contribution
- */
+
 @NonNullByDefault
 public final class WakeOnLanUtil {
 

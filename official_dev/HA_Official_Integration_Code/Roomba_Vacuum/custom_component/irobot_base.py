@@ -192,8 +192,6 @@ class IRobotVacuum(IRobotEntity, StateVacuumEntity):
             state_attrs[ATTR_ERROR] = self.vacuum.error_message
             state_attrs[ATTR_ERROR_CODE] = self.vacuum.error_code
 
-        # Not all Roombas expose position data
-        # https://github.com/koalazak/dorita980/issues/48
         if self._cap_position:
             pos_state = state.get("pose", {})
             position = None

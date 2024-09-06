@@ -1,8 +1,4 @@
-"""
-Dahua RPC2 API Client
 
-Auth taken and modified and added to, from https://gist.github.com/gxfxyz/48072a72be3a169bc43549e676713201
-"""
 import hashlib
 import json
 import logging
@@ -61,11 +57,6 @@ class DahuaRpc2Client:
         return resp_json
 
     async def login(self):
-        """Dahua RPC login.
-        Reversed from rpcCore.js (login, getAuth & getAuthByType functions).
-        Also referenced:
-        https://gist.github.com/avelardi/1338d9d7be0344ab7f4280618930cd0d
-        """
 
         # login1: get session, realm & random for real login
         self._session_id = None

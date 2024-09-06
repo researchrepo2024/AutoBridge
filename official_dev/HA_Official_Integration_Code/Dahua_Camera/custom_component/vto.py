@@ -1,7 +1,4 @@
-"""
-Copied and modified from https://github.com/elad-bar/DahuaVTO2MQTT
-Thanks to @elad-bar
-"""
+
 import struct
 import sys
 import logging
@@ -376,12 +373,6 @@ class DahuaVTOClient(asyncio.Protocol):
 
     @staticmethod
     def extract_json_objects(text, decoder=JSONDecoder()):
-        """Find JSON objects in text, and yield the decoded JSON data
-
-        Does not attempt to look for JSON arrays, text, or other JSON types outside
-        of a parent JSON object.
-        https://stackoverflow.com/questions/54235528/how-to-find-json-object-in-text-with-python/54235803
-        """
         pos = 0
         while True:
             match = text.find('{', pos)

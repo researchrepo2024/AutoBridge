@@ -9,11 +9,7 @@ import org.openhab.binding.mideaac.internal.security.Crc8;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Discovery service for Midea AC.
- *
- * @author Jacek Dobrowolski
- */
+
 public class CommandBase {
     private static Logger logger = LoggerFactory.getLogger(CommandBase.class);
 

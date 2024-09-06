@@ -1,11 +1,4 @@
-/**
- * Copyright (c) 2010-2019 by the respective copyright holders.
- *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- */
+
 
 package org.openhab.binding.appletv.internal.jpy;
 
@@ -30,11 +23,6 @@ import org.openhab.binding.appletv.internal.AppleTVHandler;
 import org.openhab.binding.appletv.internal.AppleTVHandlerFactory;
 import org.openhab.binding.appletv.internal.AppleTVLogger;
 
-/**
- * The {@link LibPyATV} wraps the PyATV library
- *
- * @author markus7017 - Initial contribution
- */
 public class LibPyATV {
     public interface PyATVProxy {
 

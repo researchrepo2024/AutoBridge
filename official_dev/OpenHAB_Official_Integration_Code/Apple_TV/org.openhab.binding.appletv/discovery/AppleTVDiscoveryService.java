@@ -1,15 +1,4 @@
-/**
- * Copyright (c) 2010-2019 Contributors to the openHAB project
- *
- * See the NOTICE file(s) distributed with this work for additional
- * information.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0
- *
- * SPDX-License-Identifier: EPL-2.0
- */
+
 package org.openhab.binding.appletv.internal.discovery;
 
 import static org.eclipse.smarthome.core.thing.Thing.PROPERTY_VENDOR;
@@ -43,11 +32,7 @@ import org.osgi.service.component.annotations.ReferencePolicy;
 
 import com.google.gson.Gson;
 
-/**
- * The {@link AppleTVDiscoveryService} is used to discover AppleTV devices.
- *
- * @author Markus Michels - Initial contribution
- */
+
 @Component(service = DiscoveryService.class, immediate = true, configurationPid = "discovery.appletv")
 public class AppleTVDiscoveryService extends AbstractDiscoveryService {
     private final AppleTVLogger logger = new AppleTVLogger(AppleTVHandler.class, "Discovery");
@@ -85,9 +70,6 @@ public class AppleTVDiscoveryService extends AbstractDiscoveryService {
     @Modified
     protected void modified(Map<String, Object> config) {
         super.modified(config);
-        // We update instead of replace the configuration object, so that if the user updates the
-        // configuration, the values are automatically available in all handlers. Because they all
-        // share the same instance.
         bindingConfig.update(new Configuration(config).as(AppleTVBindingConfiguration.class));
     }
 

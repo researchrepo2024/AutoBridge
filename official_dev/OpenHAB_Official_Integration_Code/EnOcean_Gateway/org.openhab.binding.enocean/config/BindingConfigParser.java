@@ -1,15 +1,4 @@
-/**
- * Copyright (c) 2010-2020 Contributors to the openHAB project
- *
- * See the NOTICE file(s) distributed with this work for additional
- * information.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0
- *
- * SPDX-License-Identifier: EPL-2.0
- */
+
 package org.openhab.binding.enocean.internal.config;
 
 import org.openhab.core.binding.BindingConfig;
@@ -17,19 +6,7 @@ import org.openhab.model.item.binding.BindingConfigParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Class to parse the key - value base config for an EnOcean item. Generic
- * enough to be used for other bindings as well.
- *
- * The values are set into the attributes which match the keys in the config
- * lines. Leading / trailing brackets ({}) or quotes are removed.
- *
- * @author Thomas Letsch (contact@thomas-letsch.de)
- *
- * @param <TYPE>
- *            The BindingConfig to parse into.
- * @since 1.3.0
- */
+
 public class BindingConfigParser<TYPE extends BindingConfig> {
 
     private static final Logger logger = LoggerFactory.getLogger(BindingConfigParser.class);

@@ -1,9 +1,4 @@
-"""
-Support for interface with a Sony Bravia TV.
 
-For more details about this platform, please refer to the documentation at
-https://github.com/custom-components/media_player.braviatv_psk
-"""
 import logging
 
 import homeassistant.helpers.config_validation as cv

@@ -1,11 +1,4 @@
-/**
- * Copyright (c) 2010-2018 by the respective copyright holders.
- * <p>
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- */
+
 package org.openhab.binding.tuya.internal.discovery;
 
 import java.io.IOException;
@@ -20,12 +13,7 @@ import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * The TuyaDiscoveryService is responsible for auto detecting Tuya broadcasts on
- * the local network. It builds a repository of devices for use by the various Tuya devices.
- *
- * @author Wim Vissers - Initial contribution
- */
+
 @Component(service = DiscoveryService.class)
 public class TuyaDiscoveryService extends AbstractDiscoveryService {
 

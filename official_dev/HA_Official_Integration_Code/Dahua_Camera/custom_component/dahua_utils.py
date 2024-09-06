@@ -27,25 +27,8 @@ def hass_brightness_to_dahua_brightness(hass_brightness: int) -> int:
     return int((hass_brightness / 255) * 100)
 
 
-# https://github.com/rroller/dahua/issues/166
 def parse_event(data: str) -> list[dict[str, any]]:
-    # This will turn the event stream data into a list of events, where each item in the list is a dictionary and where
-    # the key of the dictionary is the key is for example "Code" and the value is "VideoMotion", etc
-    # That's a little hard to explain... so look at this example...
-    # Code=VideoMotion;action=Start;index=0;data={
-    #    "Id" : [ 0 ],
-    #    "RegionName" : [ "Region1" ],
-    #    "SmartMotionEnable" : true
-    # }
-    # will be turned into
-    # [{
-    #   "Code":"VideoMotion",
-    #   "action":"Start",
-    #   "index":"0",
-    #   ...
-    # }]
 
-    # We will split on "--myboundary" and then skip the first 3 lines so we end up with a string that starts with Code=
     event_blocks = re.split(r'--myboundary\n', data)
 
     events = []

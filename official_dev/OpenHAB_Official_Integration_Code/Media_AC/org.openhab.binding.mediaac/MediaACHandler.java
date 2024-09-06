@@ -1,15 +1,4 @@
-/**
- * Copyright (c) 2010-2021 Contributors to the openHAB project
- *
- * See the NOTICE file(s) distributed with this work for additional
- * information.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Eclipse Public License 2.0 which is available at
- * http://www.eclipse.org/legal/epl-2.0
- *
- * SPDX-License-Identifier: EPL-2.0
- */
+
 package org.openhab.binding.mideaac.internal.handler;
 
 import static org.openhab.binding.mideaac.internal.MideaACBindingConstants.*;
@@ -67,12 +56,7 @@ import org.openhab.core.types.State;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * The {@link MideaACHandler} is responsible for handling commands, which are
- * sent to one of the channels.
- *
- * @author Jacek Dobrowolski
- */
+
 @NonNullByDefault
 public class MideaACHandler extends BaseThingHandler implements DiscoveryHandler {
 
@@ -588,12 +572,6 @@ public class MideaACHandler extends BaseThingHandler implements DiscoveryHandler
         MideaACHandler.security = security;
     }
 
-    /*
-     * The {@link ConnectionManager} class is responsible for managing the state of the TCP connection to the
-     * fan.
-     *
-     * @author Jacek Dobrowolski
-     */
     private class ConnectionManager {
         private Logger logger = LoggerFactory.getLogger(ConnectionManager.class);
 
